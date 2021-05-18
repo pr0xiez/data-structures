@@ -45,6 +45,18 @@ const LinkedList = () => {
       const next = this.head.next
       this.head = next
       this.length--
+    },
+    print: function() {
+      console.log('------- Start Linked List -------')
+      for (let i = 0; i < this.length; i++) {
+        if (i === 0) {
+          console.log(`head: ${JSON.stringify(this.head.value)}`)
+          continue
+        }
+        const node = this.getByIndex(i)
+        console.log(`value: ${JSON.stringify(node.value)}`)
+      }
+      console.log('------- End Linked List -------')
     }
   }
 }

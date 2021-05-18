@@ -1,4 +1,5 @@
-const LinkedList = require('./LinkedList')
+const { expect } = require('@jest/globals')
+const LinkedList = require('./linkedList')
 
 describe('insertAtHead', () => {
   test('it adds the element to the beginning of the list', () => {
@@ -97,6 +98,14 @@ describe('removeHead', () => {
 
     expect(ll.head.value).toBe(20)
     expect(ll.length).toBe(2)
+  })
+})
+
+describe('print', () => {
+  test('prints all values', () => {
+    const ll = LinkedList.fromValues(10, 20, 30)
+    
+    ll.print()
   })
 })
 

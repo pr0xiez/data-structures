@@ -1,4 +1,5 @@
-const LinkedList = require('./LinkedList')
+const LinkedList = require('./linkedList')
+const AddLists = require('./addLists')
 
 const Cats = [
   { name: 'Callie', id: '1' },
@@ -21,3 +22,8 @@ console.log(list.getByIndex(3))
 console.log(list.getByIndex(0).value)
 list.removeHead()
 console.log(list.getByIndex(0).value)
+
+
+const list1 = LinkedList.fromValues(3, 4, 6)
+const list2 = LinkedList.fromValues(4, 7, 3)
+console.log(AddLists(list1, list2).print())
